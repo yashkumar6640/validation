@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Form Validations</title>
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+
+</head>
+
+<body>
+  <form data-form-reference="formCheck" name="form1" id="mainForm" action="javascript:;" data-submit="handleSubmit" novalidate>
+    <div class="form-group">
+      <label for="usr">Username:</label>
+      <input data-field="firstname" data-focusin="handleFocus" data-focusout="handleBlur" minlength=4 maxlength=6 data-pattern="yash|rahul"
+        data-input="handleInput" name="firstname" type="text" data-required="">
+    </div>
+    <div id="minLength-invalid" class="alert alert-danger" data-showif="formCheck.firstname.minlength">MinLength Error</div>
+    <div id="maxLength-invalid" class="alert alert-danger" data-showif="formCheck.firstname.maxlength">MaxLength Error</div>
+    <div id="pattern-invalid" class="alert alert-danger" data-showif="formCheck.firstname.pattern">Pattern Error</div>
+    <div id="required-invalid" class="alert alert-danger" data-showif="formCheck.firstname.required">Required</div>
+
+    <div class="form-group">
+      <label for="pswd">Lastname:</label>
+      <input data-pattern="srijann" data-field="lastname" data-required="" minlength=5 data-input="handleInput" name="lastname"
+        type="text">
+    </div>
+    <div class="alert alert-danger" data-showif="formCheck.lastname.minlength">MinLength Error</div>
+    <div class="alert alert-danger" data-showif="formCheck.lastname.required">Required</div>
+    <div id="pattern-invalid" class="alert alert-danger" data-showif="formCheck.lastname.pattern">Pattern Error</div>
+
+
+    <div class="form-group">
+      <label>Password:</label>
+      <input data-field="password" type="password" data-change="handleChange" name="password">
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" data-change="handleChange" name="checkbox">
+      </label>
+    </div>
+    <label>Payment Type</label>
+
+    <div class="radio">
+      <label>
+        <input type="radio" data-change="handleChange" name="pay-type" value="w2" checked> W2
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" data-change="handleChange" name="pay-type" value="1099"> 1099
+      </label>
+    </div>
+    <div class="form-group">
+      <label>Primary Language</label>
+      <select class="form-control" data-change="handleChange" name="primaryLanguage">
+
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Date</label>
+      <input data-change="handleChange" name="date" type="date">
+    </div>
+    <div class="form-group">
+      <label>Color</label>
+      <input name="color" type="color">
+    </div>
+    <button name="submit" class="btn btn-primary submit-button" type="submit">Submit</button>
+  </form>
+
+  <form data-form-reference="formCheck2" name="form2" action="javascript:;" data-submit="handleSubmit" novalidate>
+    <div class="form-group">
+      <label for="usr">Username:</label>
+      <input id="usr" data-field="firstname" minlength=4 maxlength=6 data-pattern="yash|rahul" data-input="handleInput" name="firstname"
+        type="text" data-required="">
+    </div>
+    <div id="minLength-invalid" class="alert alert-danger" data-showif="formCheck2.firstname.minlength">MinLength Error</div>
+    <div id="maxLength-invalid" class="alert alert-danger" data-showif="formCheck2.firstname.maxlength">MaxLength Error</div>
+    <div id="pattern-invalid" class="alert alert-danger" data-showif="formCheck2.firstname.pattern">Pattern Error</div>
+    <div id="required-invalid" class="alert alert-danger" data-showif="formCheck2.firstname.required">Required</div>
+
+    <div class="form-group">
+      <label for="pswd">Lastname:</label>
+      <input data-pattern="srijann" data-field="lastname" data-required="" minlength=5 data-input="handleInput" name="lastname"
+        type="text">
+    </div>
+    <div class="alert alert-danger" data-showif="formCheck2.lastname.minlength">MinLength Error</div>
+    <div class="alert alert-danger" data-showif="formCheck2.lastname.required">Required</div>
+    <div id="pattern-invalid" class="alert alert-danger" data-showif="lastname.pattern">Pattern Error</div>
+
+
+    <div class="form-group">
+      <label for="pswd">Password:</label>
+      <input data-field="password" type="password" data-change="handleChange" name="password" type="text">
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" data-change="handleChange" name="checkbox">
+      </label>
+    </div>
+    <label>Payment Type</label>
+
+    <div class="radio">
+      <label>
+        <input type="radio" data-change="handleChange" name="pay-type" value="w2" checked> W2
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" data-change="handleChange" name="pay-type" value="1099"> 1099
+      </label>
+    </div>
+    <div class="form-group">
+      <label>Primary Language</label>
+      <select class="form-control" data-change="handleChange" name="primaryLanguage">
+
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Date</label>
+      <input data-change="handleChange" name="date" type="date">
+    </div>
+    <div class="form-group">
+      <label>Color</label>
+      <input name="color" type="color">
+    </div>
+    <button name="submit" class="btn btn-primary submit-button" type="submit">Submit</button>
+  </form>
+  <!-- <script src="./validationModule.js"></script> -->
+  <!-- <script src="./validation1.js"></script> -->
+  <!-- <script src="./testingPrototypeBased.js"></script> -->
+  <!-- <script src="./testingProto2.js"></script> -->
+
+  <!-- <script src="./main.js"></script> -->
+  <script src="./main2.js"></script>
+
+  <!-- <script src="./form2.js"></script> -->
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
